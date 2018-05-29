@@ -1,0 +1,164 @@
+.header {
+  position: relative;
+  margin: 0;
+  width: 100%;
+
+  +tablet() {
+    width: auto;
+  }
+  +mobile() {
+    width: auto;
+  }
+}
+
+.header-inner {
+  // position: absolute;
+  top: 0;
+  overflow: hidden;
+  padding: 0;
+  height: 690px;
+  width: 100%;
+  background: transparent;
+  box-shadow: $box-shadow-inner;
+  border-radius: $border-radius-inner;
+
+  +desktop-large() {
+    .container & { width: $sidebar-desktop; }
+  }
+  +tablet() {
+    position: relative;
+    width: auto;
+    border-radius: initial;
+  }
+  +mobile() {
+    position: relative;
+    width: auto;
+    border-radius: initial;
+    height: 260px;
+  }
+}
+
+.main {
+  clearfix();
+  +tablet() {
+    padding-bottom: 100px;
+  }
+  +mobile() {
+    padding-bottom: 100px;
+  }
+}
+
+.container .main-inner {
+  width: $main-desktop;
+
+  +tablet() {
+    width: auto;
+  }
+  +mobile() {
+    width: auto;
+  }
+}
+
+.content-wrap {
+  float: right;
+  box-sizing: border-box;
+  width: $content-desktop;
+  min-height: 700px;
+  box-shadow: $box-shadow-inner;
+  border-radius: $border-radius-inner;
+
+  +tablet() {
+    width: 100%;
+    padding: 0;
+    border-radius: initial;
+  }
+  +mobile() {
+    width: 100%;
+    min-height: auto;
+    border-radius: initial;
+  }
+}
+
+.sidebar {
+  position: static;
+  float: left;
+  margin-top: 300px;
+  width: $sidebar-desktop;
+  background: $body-bg-color;
+  box-shadow: none;
+
+  +tablet() {
+    display: none;
+  }
+  +mobile() {
+    display: none;
+  }
+}
+
+.sidebar-toggle { display: none; }
+
+
+.footer-inner {
+  width: $main-desktop;
+  padding-left: 260px;
+
+  +tablet() {
+    width: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  +mobile() {
+    width: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+
+.sidebar-position-right {
+  .header-inner { right: 0; }
+  .content-wrap { float: left; }
+  .sidebar { float: right; }
+
+  .footer-inner {
+    padding-left: 0;
+    padding-right: 260px;
+  }
+}
+
+.header-megumi {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  transition: 1s linear;
+  opacity: 0;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+.footer-megumi {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  height: 600px;
+  width: 425px;
+  background: url(/images/footer-megumi.png) no-repeat;
+  background-size: contain;
+  transition: 1s linear;
+  opacity: 0;
+  filter: blur(10px);
+
+  &.loaded {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  +mobile() {
+    display: none;
+  }
+}

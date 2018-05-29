@@ -1,0 +1,77 @@
+.post-body {
+  +mobile() {
+    text-align: justify;
+  }
+}
+
+.post {
+  position: relative;
+  z-index: 1;
+  padding: $content-desktop-padding;
+  background-color: #fff;
+  background-image: url(/images/post-bg.png);
+  background-size: cover;
+  background-position: 650px center;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  // opacity: 0;
+
+  +mobile() {
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+
+  &:nth-child(4n+1):before {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: -20px;
+    width: 60px;
+    height: 40px;
+    background: url(/images/aki-megane.png) no-repeat;
+    background-size: contain;
+  }
+
+  &:nth-child(4n+2):before {
+    content: "";
+    position: absolute;
+    right: -12px;
+    top: -22px;
+    width: 80px;
+    height: 47px;
+    background: url(/images/eriri-pen.png) no-repeat;
+    background-size: contain;
+  }
+
+  &:nth-child(4n+3):before {
+    content: "";
+    position: absolute;
+    right: -9px;
+    top: -35px;
+    width: 90px;
+    height: 81px;
+    background: url(/images/utaha-ranobe.png) no-repeat;
+    background-size: contain;
+  }
+
+  &:nth-child(4n+4):before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: -28px;
+    width: 60px;
+    height: 60px;
+    background: url(/images/michiru-onigiri.png) no-repeat;
+    background-size: contain;
+  }
+
+  &:before {
+    +mobile() {
+      right: 0 !important;
+    }
+  }
+}
+
+.post-header {
+  margin-bottom: 30px;
+}

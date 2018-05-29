@@ -1,0 +1,106 @@
+.site-brand-wrapper {
+  position: relative;
+  height: 650px;
+  width: 100%;
+  overflow: hidden;
+
+  +mobile() {
+    height: 260px;
+  }
+
+  .site-brand-bg {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 650px;
+    width: 100%;
+    transition: opacity 1s linear;
+  }
+
+  .site-brand-small {
+    filter: blur(50px);
+    transform: scale(1);
+  }
+
+  .loaded {
+    opacity: 1;
+  }
+}
+
+.sakura-front {
+  position: absolute;
+  height: 104%;
+  width: 100%;
+  background-image: url(/images/sakura.png);
+  background-size: cover;
+}
+
+#sakura {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 2s;
+}
+
+.site-meta {
+  padding: 190px 0 20px 0;
+  color: white;
+  background: transparent;
+
+  +mobile() {
+    padding: 0;
+  }
+}
+
+.brand {
+  padding: 0;
+  background: none;
+  color: white;
+  font-family: $font-family-title;
+
+  &:hover {
+    color: $black-light;
+  }
+}
+
+.site-subtitle {
+  margin: 10px 10px 0;
+  font-weight: initial;
+}
+
+.site-search form { display: none; }
+
+.site-title {
+  .guide {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .animate {
+    color: white;
+    text-shadow: 1px 1px 0 #bfc5e9, -1px -1px 0 #9c94cc;
+    transition: .3s;
+    line-height: 130px;
+    top: 100px;
+    position: relative;
+
+    span {
+      position: absolute;
+      opacity: 0;
+    }
+
+    &:hover {
+      opacity: 0.2;
+    }
+
+    +mobile() {
+      top: 80px;
+    }
+  }
+}
