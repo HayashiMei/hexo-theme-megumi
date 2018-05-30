@@ -1,5 +1,4 @@
 {% if theme.font.enable %}
-
   {% set font_config = theme.font %}
   {% set font_families = '' %}
   {% set font_styles = ':300,300italic,400,400italic,700,700italic' %}
@@ -14,7 +13,6 @@
     {% if font_found %}
       {% set font_families += '|' %}
     {% endif %}
-
     {% set font_families += font_config.headings.family + font_styles %}
   {% endif %}
 
@@ -22,7 +20,6 @@
     {% if font_found %}
       {% set font_families += '|' %}
     {% endif %}
-
     {% set font_families += font_config.posts.family + font_styles %}
   {% endif %}
 
@@ -30,7 +27,6 @@
     {% if font_found %}
       {% set font_families += '|' %}
     {% endif %}
-
     {% set font_families += font_config.logo.family + font_styles %}
   {% endif %}
 
@@ -38,7 +34,6 @@
     {% if font_found %}
       {% set font_families += '|' %}
     {% endif %}
-
     {% set font_families += font_config.codes.family + font_styles %}
   {% endif %}
 
@@ -46,7 +41,6 @@
     {% if font_found %}
       {% set font_families += '|' %}
     {% endif %}
-
     {% set font_families += font_config.title.family + font_styles %}
   {% endif %}
 
@@ -55,5 +49,4 @@
     {% set font_host = font_config.host | default('//fonts.googleapis.com') %}
     <link href="{{ font_host }}/css?family={{ font_families }}" rel="stylesheet" type="text/css">
   {% endif %}
-
 {% endif %}

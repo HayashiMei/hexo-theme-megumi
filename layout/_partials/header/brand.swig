@@ -16,8 +16,6 @@
       <div class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">
-          <!-- {{ config.title }} -->
-
           <div id="animate" class="animate">
             {% for letter in config.title %}{#
               #}<span>{{ letter }}</span>{#
@@ -29,7 +27,6 @@
               #}<span>{{ letter }}</span>{#
             #}{% endfor %}
           </div>
-
         </span>
         <span class="logo-line-after"><i></i></span>
       </div>

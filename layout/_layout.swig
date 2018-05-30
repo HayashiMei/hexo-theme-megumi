@@ -15,7 +15,6 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
-
   {% set container_class = "container " %}
   {% if theme.sidebar.position %}
     {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
@@ -25,8 +24,6 @@
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner">{% include '_partials/header/index.swig' %}</div>
     </header>
-
-    {{ partial('_third-party/github-banner.swig', {}, {cache: theme.cache.enable}) }}
 
     <main id="main" class="main">
       <div class="main-inner">
@@ -70,13 +67,10 @@
         </span>
       </div>
     {% endif %}
-
   </div>
 
   {% include '_scripts/vendors.swig' %}
-
   {% block script_extra %}{% endblock %}
-
   <script id="ribbon" type="text/javascript" size="{{ theme.canvas_ribbon.size }}" alpha="{{ theme.canvas_ribbon.alpha }}"  zIndex="{{theme.canvas_ribbon.zIndex }}" src="{{ url_for(theme.js) }}/megumi.min.js?v={{ theme.version }}"></script>
 
   {% include '_third-party/comments/index.swig' %}

@@ -30,8 +30,8 @@
           {% elseif theme.local_search.enable || theme.algolia_search.enable %}
             <a href="javascript:;" class="popup-trigger">
           {% endif %}
-            {% if theme.menu_settings.icons %}
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />{#
+          {% if theme.menu_settings.icons %}
+            <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>{#
           #}{% endif %}{#
           #}{{ __('menu.search') }}{#
         #}</a>
