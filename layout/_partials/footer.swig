@@ -51,7 +51,7 @@
 {% if theme.footer.theme.enable %}
   <div class="theme-info">{#
   #}{{ __('footer.theme') }} &mdash; {#
-  #}<a class="theme-link" target="_blank"{{ nofollow }} href="https://github.com/HayashiMei">{#
+  #}<a class="theme-link" target="_blank"{{ nofollow }} href="https://github.com/HayashiMei/hexo-theme-megumi">{#
     #}Megumi{#
   #}</a>{% if theme.footer.theme.version %} v{{ theme.version }}{% endif %}{#
 #}</div>
