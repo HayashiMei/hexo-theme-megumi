@@ -58,7 +58,6 @@
 {% endif %}
 
 {% if theme.footer.custom_text %}
-  <div class="footer-custom">{#
-  #}{{ theme.footer.custom_text }}{#
-#}</div>
+  <span class="post-meta-divider">|</span>
+  <div class="footer-custom">{{ theme.footer.custom_text }}</div>
 {% endif %}
