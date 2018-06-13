@@ -86,5 +86,15 @@
   {% include '_third-party/exturl.swig' %}
   {% include '_third-party/bookmark.swig' %}
   {% include '_third-party/copy-code.swig' %}
+
+  <script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+      .register('/sw.js')
+      .then(function() {
+        console.log("Service Worker Registered");
+      });
+    }
+  </script>
 </body>
 </html>
