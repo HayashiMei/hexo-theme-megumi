@@ -30,13 +30,17 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             {% if theme.avatar %}
-              <img class="site-author-image" itemprop="image"
-                src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
-                alt="{{ theme.author }}" />
+              <picture>
+                {% if theme.avatar_webp %}
+                  <source type="image/webp" srcset="{{ url_for( theme.avatar_webp ) }}" />
+                {% endif %}
+                <img class="site-author-image" itemprop="image"
+                  src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}" alt="{{ theme.author }}" />
+              </picture>
             {% endif %}
-              <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
-              <p class="site-description motion-element" itemprop="description">{#
-              #}{{ theme.description }}{#
+            <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
+            <p class="site-description motion-element" itemprop="description">{#
+            #}{{ theme.description }}{#
             #}</p>
           </div>
 

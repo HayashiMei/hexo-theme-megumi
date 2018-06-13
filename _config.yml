@@ -62,9 +62,7 @@ rss:
 
 brand:
   background:
-    small: /images/header-megumi-small.jpg
-    medium: /images/header-megumi-medium.jpg
-    origin: /images/header-megumi-origin.jpg
+    origin: /images/header-megumi-origin
 
 footer:
   # Specify the date when the site was setup.
@@ -202,6 +200,7 @@ links_layout: block
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
 avatar: /images/avatar.jpg
+avatar_webp: /images/avatar.webp
 
 # Table Of Contents in the Sidebar
 toc:

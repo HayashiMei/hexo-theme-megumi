@@ -133,7 +133,7 @@
   background-position: center 50%;
   background-repeat: no-repeat;
   position: absolute;
-  transition: 1s linear;
+  transition: .5s linear;
   opacity: 0;
 
   &.loaded {
@@ -147,15 +147,14 @@
   right: 5%;
   height: 600px;
   width: 425px;
-  background: url(/images/footer-megumi.png) no-repeat;
   background-size: contain;
   transition: 1s linear;
   opacity: 0;
-  filter: blur(10px);
+  // filter: blur(10px);
 
   &.loaded {
     opacity: 1;
-    filter: blur(0);
+    // filter: blur(0);
   }
 
   +mobile() {

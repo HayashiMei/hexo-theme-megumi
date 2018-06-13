@@ -4,10 +4,7 @@ const TweenLite = gsap.TweenLite;
 const animatedText = document.getElementById('animate');
 const guideText = document.getElementById('guide');
 
-// select the spans in in the guide
 const guideSpans = guideText.getElementsByTagName('span');
-
-// select the spans in in the guide
 const animatedSpans = animatedText.getElementsByTagName('span');
 
 const textLength = guideSpans.length;
@@ -24,7 +21,6 @@ const placeSpans = () => {
     animated.style.left = rect.left + 'px';
   }
 }
-
 
 const animateLetterIn = (i) => {
   setTimeout(() => {
@@ -43,40 +39,11 @@ const animateLetterIn = (i) => {
       ease: Back.easeOut
     });
   }, i * 200);
-
-  // if (i === textLength - 1) {
-  //   setTimeout(() => {
-  //     animateOut();
-  //   }, (textLength + 3) * 200);
-  // }
-}
-
-const animateLetterOut = (i) => {
-  setTimeout(() => {
-    TweenLite.to(animatedSpans[i], 0.4, {
-      opacity: 0,
-      y: 40,
-      scale: 0,
-      ease: Power3.easeIn
-    });
-  }, i * 200);
-
-  if (i === textLength - 1) {
-    setTimeout(() => {
-      animateIn();
-    }, (textLength + 3) * 200);
-  }
 }
 
 const animateIn = () => {
   for (var i = 0; i < textLength; i++) {
     animateLetterIn(i);
-  }
-}
-
-const animateOut = () => {
-  for (var i = 0; i < textLength; i++) {
-    animateLetterOut(i);
   }
 }
 
@@ -90,31 +57,40 @@ const resizeText = (text, fontSize) => {
 const resize = () => {
   let fontSize = window.innerWidth / 9;
   if (fontSize > 130) fontSize = 130;
-  (fontSize * -0.5) + 'px';
+  // (fontSize * -0.5) + 'px';
   resizeText(animatedText, fontSize);
   resizeText(guideText, fontSize);
   placeSpans();
 }
 
-const prallaxBackground = document.querySelector('.sakura-front'),
-  force = 4.2
+const checkWebpFeature = require('./check-webp.js');
 
-const prallax = e => {
-  const cx = window.innerWidth / 2,
-    cy = window.innerHeight / 2,
-    dx = e.clientX - cx,
-    dy = e.clientY - cy;
+const activePrallax = () => {
+  const prallaxBackground = document.querySelector('.sakura-front'),
+    force = 4.2
 
-  TweenLite.killTweensOf([prallaxBackground]);
-  TweenLite.to(prallaxBackground, .8, {
-    x: .01 * dx * force >> 0,
-    y: .01 * dx * force >> 0
-  });
+  if (CONFIG.supportWebp) prallaxBackground.style.backgroundImage = 'url(/images/sakura.webp)';
+  else prallaxBackground.style.backgroundImage = 'url(/images/sakura.png)';
+
+  const prallax = e => {
+    const cx = window.innerWidth / 2,
+      cy = window.innerHeight / 2,
+      dx = e.clientX - cx,
+      dy = e.clientY - cy;
+
+    TweenLite.killTweensOf([prallaxBackground]);
+    TweenLite.to(prallaxBackground, .8, {
+      x: .01 * dx * force >> 0,
+      y: .01 * dy * force >> 0
+    });
+  }
+
+  window.addEventListener('mousemove', prallax);
 }
 
 setTimeout(() => {
   resize();
   animateIn();
   window.addEventListener('resize', resize);
-  window.addEventListener('mousemove', prallax);
+  checkWebpFeature(activePrallax);
 }, 100);
