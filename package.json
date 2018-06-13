@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-megumi",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Just a theme for Hexo",
   "main": "index.js",
   "directories": {
