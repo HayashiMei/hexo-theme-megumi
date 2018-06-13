@@ -92,7 +92,7 @@
       navigator.serviceWorker
       .register('/sw.js')
       .then(function() {
-        console.log("Service Worker Registered");
+        console.log("Service Worker 注册好啦(/≧▽≦/)");
       });
     }
   </script>
