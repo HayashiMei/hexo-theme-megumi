@@ -28,3 +28,13 @@ $(document).on('pjax:end', function () {
   ga('set', 'location', window.location.href);
   ga('send', 'pageview');
 });
+
+const addEventToMenu = e => {
+  const menu = document.querySelector('#menu');
+	menu.addEventListener('click', (e) => {
+    const clickMenu = e.target.parentElement;
+    $(clickMenu).addClass('menu-item-active').siblings().removeClass('menu-item-active');
+  });
+}
+
+$(document).ready(addEventToMenu);
