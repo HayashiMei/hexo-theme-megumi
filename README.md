@@ -4,7 +4,7 @@
 
 只是一个简单的hexo主题。
 
-基于[hexo-theme-next](https://github.com/iissnan/hexo-theme-next)，大量参考了[hexo-theme-sagiri](https://github.com/DIYgod/hexo-theme-sagiri)
+基于[hexo-theme-sagiri](https://github.com/DIYgod/hexo-theme-sagiri)
 
 ## Attention
 
