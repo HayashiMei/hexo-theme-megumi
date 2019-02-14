@@ -20,39 +20,49 @@ const placeSpans = () => {
     // span to rect.left
     animated.style.left = rect.left + 'px';
   }
-}
+};
 
-const animateLetterIn = (i) => {
+const animateLetterIn = i => {
   setTimeout(() => {
-    TweenLite.fromTo(animatedSpans[i], 0.4, {
-      opacity: 0,
-      y: 40
-    }, {
-      opacity: 1,
-      y: 0,
-      ease: Power3.easeOut
-    });
-    TweenLite.fromTo(animatedSpans[i], 0.4, {
-      scale: 0
-    }, {
-      scale: 1,
-      ease: Back.easeOut
-    });
+    TweenLite.fromTo(
+      animatedSpans[i],
+      0.4,
+      {
+        opacity: 0,
+        y: 40,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        ease: Power3.easeOut,
+      }
+    );
+    TweenLite.fromTo(
+      animatedSpans[i],
+      0.4,
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        ease: Back.easeOut,
+      }
+    );
   }, i * 200);
-}
+};
 
 const animateIn = () => {
   for (var i = 0; i < textLength; i++) {
     animateLetterIn(i);
   }
-}
+};
 
 // just to make sure the text will fit the window width
 const resizeText = (text, fontSize) => {
   text.style.fontSize = fontSize + 'px';
   text.style.height = fontSize + 'px';
   text.style.lineHeight = fontSize + 'px';
-}
+};
 
 const resize = () => {
   let fontSize = window.innerWidth / 9;
@@ -61,13 +71,13 @@ const resize = () => {
   resizeText(animatedText, fontSize);
   resizeText(guideText, fontSize);
   placeSpans();
-}
+};
 
 const checkWebpFeature = require('./check-webp.js');
 
 const activePrallax = () => {
   const prallaxBackground = document.querySelector('.sakura-front'),
-    force = 4.2
+    force = 4.2;
 
   if (CONFIG.supportWebp) prallaxBackground.style.backgroundImage = 'url(/images/sakura.webp)';
   else prallaxBackground.style.backgroundImage = 'url(/images/sakura.png)';
@@ -79,14 +89,14 @@ const activePrallax = () => {
       dy = e.clientY - cy;
 
     TweenLite.killTweensOf([prallaxBackground]);
-    TweenLite.to(prallaxBackground, .8, {
-      x: .01 * dx * force >> 0,
-      y: .01 * dy * force >> 0
+    TweenLite.to(prallaxBackground, 0.8, {
+      x: (0.01 * dx * force) >> 0,
+      y: (0.01 * dy * force) >> 0,
     });
-  }
+  };
 
   window.addEventListener('mousemove', prallax);
-}
+};
 
 setTimeout(() => {
   resize();

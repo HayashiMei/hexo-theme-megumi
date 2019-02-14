@@ -1,50 +1,31 @@
-/* eslint-disable no-undef */
 const path = require('path');
-const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  bail: true,
-  devtool: 'source-map',
   entry: {
-    'megumi': './src/index.js'
+    megumi: './src/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'source', 'js'),
     filename: '[name].min.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   resolve: {
-    modules: ['node_modules'],
-    extensions: ['.js']
+    extensions: ['.js'],
   },
   module: {
-    strictExportPresence: true,
-    rules: [{
-      test: /\.js$/,
-      use: [{
-        loader: require.resolve('babel-loader'),
-        options: {
-          compact: true,
-          presets: ['env']
-        }
-      }]
-    }]
-  },
-  optimization: {
-    minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          compress: false
-        }
-      })
-    ]
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader?cacheDirectory',
+      },
+    ],
   },
   node: {
     dgram: 'empty',
     fs: 'empty',
     net: 'empty',
     tls: 'empty',
-  }
+  },
 };

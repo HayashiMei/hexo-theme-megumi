@@ -19,18 +19,17 @@ cache:
 # outside theme directory in root `source/_data`, set
 # `styles: source/_data/styles.styl`
 #custom_file_path:
-  # Default paths: layout/_custom/*
-  #head: source/_data/head.swig
-  #header: source/_data/header.swig
-  #sidebar: source/_data/sidebar.swig
+# Default paths: layout/_custom/*
+#head: source/_data/head.swig
+#header: source/_data/header.swig
+#sidebar: source/_data/sidebar.swig
 
-  # Default path: source/css/_variables/custom.styl
-  #variables: source/_data/variables.styl
-  # Default path: source/css/_mixins/custom.styl
-  #mixins: source/_data/mixins.styl
-  # Default path: source/css/_custom/custom.styl
-  #styles: source/_data/styles.styl
-
+# Default path: source/css/_variables/custom.styl
+#variables: source/_data/variables.styl
+# Default path: source/css/_mixins/custom.styl
+#mixins: source/_data/mixins.styl
+# Default path: source/css/_custom/custom.styl
+#styles: source/_data/styles.styl
 
 # ---------------------------------------------------------------
 # Site Information Settings
@@ -77,7 +76,7 @@ footer:
     # If you want to animate the icon, set it to true.
     animated: false
     # Change the color of icon, using Hex Code.
-    color: "#808080"
+    color: '#808080'
 
   # If not defined, will be used `author` from Hexo main config.
   copyright:
@@ -113,7 +112,6 @@ seo: true
 # subtitle: Subtitle
 index_with_subtitle: false
 
-
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
@@ -147,7 +145,6 @@ menu_settings:
 # scheme: Mist
 scheme: Pisces
 # scheme: Gemini
-
 
 # ---------------------------------------------------------------
 # Sidebar Settings
@@ -194,7 +191,7 @@ links_title: Links
 links_layout: block
 #links_layout: inline
 #links:
-  #Title: http://example.com/
+#Title: http://example.com/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
@@ -245,7 +242,6 @@ sidebar:
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
 
-
 # ---------------------------------------------------------------
 # Post Settings
 # ---------------------------------------------------------------
@@ -295,9 +291,9 @@ codeblock:
 
 # Wechat Subscriber
 #wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
+#enabled: true
+#qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+#description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
 #reward_comment: Donate comment here
@@ -330,7 +326,6 @@ post_edit:
   url: https://github.com/theme-next/theme-next.org/_posts/tree/master/ # Link for view source.
 # url: https://github.com/theme-next/theme-next.org/_posts/edit/master/ # Link for fork & edit.
 
-
 # ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
@@ -339,7 +334,7 @@ post_edit:
 mobile_layout_economy: false
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
-android_chrome_color: "#fff"
+android_chrome_color: '#fff'
 
 # Custom Logo.
 # !!Only available for Default Scheme currently.
@@ -422,11 +417,10 @@ font:
     external: true
     family:
     size:
-  
+
   title:
     external: true
     family: Great Vibes
-
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
@@ -496,21 +490,19 @@ changyan:
   appid:
   appkey:
 
-
 # Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
   enable: false
-  appid:  # your leancloud application appid
-  appkey:  # your leancloud application appkey
+  appid: # your leancloud application appid
+  appkey: # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
-
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
@@ -548,7 +540,7 @@ gitment:
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
 #jiathis:
-  ##uid: Get this uid from http://www.jiathis.com/
+##uid: Get this uid from http://www.jiathis.com/
 
 #add_this_id:
 
@@ -607,36 +599,36 @@ google_analytics: UA-119236134-1
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
 facebook_sdk:
-  enable:       false
-  app_id:       #<app_id>
-  fb_admin:     #<user_id>
-  like_button:  #true
-  webmaster:    #true
+  enable: false
+  app_id: #<app_id>
+  fb_admin: #<user_id>
+  like_button: #true
+  webmaster: #true
 
 # Facebook comments plugin
 # This plugin depends on Facebook SDK.
 # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
 facebook_comments_plugin:
-  enable:       false
-  num_of_posts: 10    # min posts num is 1
-  width:        100%  # default width is 550px
-  scheme:       light # default scheme is light (light or dark)
+  enable: false
+  num_of_posts: 10 # min posts num is 1
+  width: 100% # default width is 550px
+  scheme: light # default scheme is light (light or dark)
 
 # VKontakte API Support.
 # To get your AppID visit https://vk.com/editapp?act=create
 vkontakte_api:
-  enable:       false
-  app_id:       #<app_id>
-  like:         true
-  comments:     true
+  enable: false
+  app_id: #<app_id>
+  like: true
+  comments: true
   num_of_posts: 10
 
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
   enable: false
-  id:     #<app_id>
-  color:  fc6423
+  id: #<app_id>
+  color: fc6423
 # ---------------------------------------------------------------
 
 # Show number of visitors to each article.
@@ -672,13 +664,11 @@ busuanzi_count:
   post_views: true
   post_views_icon: eye
 
-
 # Tencent analytics ID
 # tencent_analytics:
 
 # Tencent MTA ID
 # tencent_mta:
-
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
@@ -710,7 +700,7 @@ algolia_search:
   labels:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}"
-    hits_stats: "${hits} results found in ${time} ms"
+    hits_stats: '${hits} results found in ${time} ms'
 
 # Local search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
@@ -733,7 +723,6 @@ bookmark:
   #   - or clicking the bookmark-icon
   # if manual, only save it by clicking the bookmark-icon
   save: auto
-
 
 # ---------------------------------------------------------------
 # Tags Settings
@@ -773,9 +762,8 @@ tabs:
 # Dependencies: https://github.com/theme-next/theme-next-reading-progress
 reading_progress:
   enable: false
-  color: "#37c6c0"
+  color: '#37c6c0'
   height: 2px
-
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
@@ -967,11 +955,10 @@ vendors:
   # Example: https://cdn.jsdelivr.net/npm/valine@1.1.8/dist/Valine.min.js
   valine:
 
-
 # Assets
 css: css
 js: js
 images: images
 
 # Theme version
-version: 0.0.3
+version: 0.0.4
