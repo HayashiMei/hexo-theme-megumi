@@ -94,7 +94,7 @@ footer:
     version: true
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  custom_text: Hosted by <a target="_blank" rel="external nofollow noopener" href="https://cloud.google.com/"><b>Google Cloud</b></a>
+  custom_text: Hosted by <a target="_blank" rel="external nofollow noopener" href="https://aws.amazon.com/cn/"><b>AWS</b></a>
 
 # ---------------------------------------------------------------
 # SEO Settings
