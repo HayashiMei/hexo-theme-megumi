@@ -1,5 +1,5 @@
 function pisces() {
-  $(document).ready(function () {
+  $(document).ready(function() {
     var sidebarInner = $('.sidebar-inner');
 
     initAffix();
@@ -16,8 +16,8 @@ function pisces() {
         sidebarInner.affix({
           offset: {
             top: headerOffset - 2 * CONFIG.sidebar.offset,
-            bottom: footerOffset
-          }
+            bottom: footerOffset,
+          },
         });
       }
 
@@ -26,7 +26,7 @@ function pisces() {
 
     function resizeListener() {
       var mql = window.matchMedia('(min-width: 991px)');
-      mql.addListener(function (e) {
+      mql.addListener(function(e) {
         if (e.matches) {
           recalculateAffixPosition();
         }
@@ -46,7 +46,7 @@ function pisces() {
 
     function setSidebarMarginTop(headerOffset) {
       return $('#sidebar').css({
-        'margin-top': headerOffset
+        'margin-top': headerOffset,
       });
     }
 

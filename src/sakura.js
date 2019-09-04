@@ -1,6 +1,6 @@
 const sakura = () => {
-  const canvas = document.getElementById("sakura");
-  const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById('sakura');
+  const ctx = canvas.getContext('2d');
   const Radian = Math.PI / 180;
 
   const petals = [],
@@ -12,16 +12,19 @@ const sakura = () => {
     petalHeight = 16,
     dx = 5;
 
-  const inTroSakura = new Image;
-  inTroSakura.src = "/images/intro_sakura.png";
+  const inTroSakura = new Image();
+  inTroSakura.src = '/images/intro_sakura.png';
   inTroSakura.onload = () => {
     init();
     setInterval(randomX, 3e3);
     setInterval(updatePetals, 10);
     canvas.style.opacity = '1';
-  }
+  };
 
-  const u = 1.3, w = .5, m = 1, _ = .5;
+  const u = 1.3,
+    w = 0.5,
+    m = 1,
+    _ = 0.5;
   const init = () => {
     for (let i = 0; i < num; i++) {
       let e = Math.random() * (u - w) + w;
@@ -31,17 +34,17 @@ const sakura = () => {
         sizew: petalWidth * e,
         sizeh: petalHeight * e,
         speedy: Math.random() * (m - _) + _,
-        angle: 360 * Math.random()
-      })
+        angle: 360 * Math.random(),
+      });
     }
-  }
+  };
 
   const updatePetals = () => {
     ctx.clearRect(0, 0, width, height);
     for (let i = 0; i < num; i++) {
       petals[i].posx += dx / petals[i].sizew;
       petals[i].posy += petals[i].speedy;
-      i % 2 ? petals[i].angle += 1 : petals[i].angle -= 1;
+      i % 2 ? (petals[i].angle += 1) : (petals[i].angle -= 1);
       const v = Math.cos(petals[i].angle * Radian);
       const E = Math.sin(petals[i].angle * Radian);
       ctx.setTransform(v, E, E, v, petals[i].posx, petals[i].posy);
@@ -62,22 +65,24 @@ const sakura = () => {
         }
       }
     }
-  }
-  
-  const b = 25, L = 5;
+  };
 
-  let tid = null, T = 0;
+  const b = 25,
+    L = 5;
+
+  let tid = null,
+    T = 0;
 
   const randomX = () => {
     T = Math.random() * (b - L) + L;
     clearInterval(tid);
     tid = setInterval(() => {
       if (T != dx) {
-        T > dx ? dx += .01 : dx -= .01;
+        T > dx ? (dx += 0.01) : (dx -= 0.01);
       }
-    }, 100)
-  }
-}
+    }, 100);
+  };
+};
 
 setTimeout(() => {
   sakura();
