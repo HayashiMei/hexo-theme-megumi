@@ -11,7 +11,6 @@
   {% include '_partials/head/head-unique.swig' %}
   <title>{% block title %}{% endblock %}</title>
   {% include '_third-party/analytics/index.swig' %}
-  {{ partial('_scripts/noscript.swig', {}, {cache: theme.cache.enable}) }}
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
@@ -88,11 +87,19 @@
   {% include '_third-party/copy-code.swig' %}
 
   <script>
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker
-      .register('/sw.js')
-      .then(function() {
-        console.log("Service Worker 注册好啦(/≧▽≦/)");
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(() => {
+        console.log(
+          '%cService Worker',
+          'background-color: #9f80a9; color: white; padding: 2px 0.5em; border-radius: 0.5em;',
+          '注册好啦(/≧▽≦/)',
+        );
+      }).catch(err => {
+        console.log(
+          '%cService Worker',
+          'background-color: #e6352e; color: white; padding: 2px 0.5em; border-radius: 0.5em;',
+          '注册失败了!!(●ω●;)',
+        );
       });
     }
   </script>

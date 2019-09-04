@@ -6,7 +6,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   mode: 'production',
   bail: true,
-  devtool: 'source-map',
   entry: {
     'megumi': './src/index.js'
   },
