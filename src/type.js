@@ -11,11 +11,11 @@ const textLength = guideSpans.length;
 
 const placeSpans = () => {
   // for each span in the guide
-  for (var i = 0; i < textLength; i++) {
-    let guide = guideSpans[i];
-    let animated = animatedSpans[i];
+  for (let i = 0; i < textLength; i++) {
+    const guide = guideSpans[i];
+    const animated = animatedSpans[i];
     // get the guide client rect
-    let rect = guide.getBoundingClientRect();
+    const rect = guide.getBoundingClientRect();
     // set the left property of the animate
     // span to rect.left
     animated.style.left = rect.left + 'px';
@@ -52,7 +52,7 @@ const animateLetterIn = i => {
 };
 
 const animateIn = () => {
-  for (var i = 0; i < textLength; i++) {
+  for (let i = 0; i < textLength; i++) {
     animateLetterIn(i);
   }
 };
@@ -66,7 +66,7 @@ const resizeText = (text, fontSize) => {
 
 const resize = () => {
   let fontSize = window.innerWidth / 9;
-  if (fontSize > 130) fontSize = 130;
+  if (fontSize > 130) {fontSize = 130;}
   // (fontSize * -0.5) + 'px';
   resizeText(animatedText, fontSize);
   resizeText(guideText, fontSize);
@@ -79,8 +79,8 @@ const activePrallax = () => {
   const prallaxBackground = document.querySelector('.sakura-front'),
     force = 4.2;
 
-  if (CONFIG.supportWebp) prallaxBackground.style.backgroundImage = 'url(/images/sakura.webp)';
-  else prallaxBackground.style.backgroundImage = 'url(/images/sakura.png)';
+  if (CONFIG.supportWebp) {prallaxBackground.style.backgroundImage = 'url(/images/sakura.webp)';}
+  else {prallaxBackground.style.backgroundImage = 'url(/images/sakura.png)';}
 
   const prallax = e => {
     const cx = window.innerWidth / 2,

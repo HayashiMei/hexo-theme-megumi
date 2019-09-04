@@ -1,14 +1,15 @@
 function pisces() {
-  $(document).ready(function() {
-    var sidebarInner = $('.sidebar-inner');
+  $(document).ready(() => {
+    const sidebarInner = $('.sidebar-inner');
 
     initAffix();
     resizeListener();
 
     function initAffix() {
-      var headerOffset = getHeaderOffset(),
+      const headerOffset = getHeaderOffset(),
         footerOffset = getFooterOffset(),
-        sidebarHeight = $('#sidebar').height() + NexT.utils.getSidebarb2tHeight(),
+        sidebarHeight =
+          $('#sidebar').height() + NexT.utils.getSidebarb2tHeight(),
         contentHeight = $('#content').height();
 
       // Not affix if sidebar taller then content (to prevent bottom jumping).
@@ -25,8 +26,8 @@ function pisces() {
     }
 
     function resizeListener() {
-      var mql = window.matchMedia('(min-width: 991px)');
-      mql.addListener(function(e) {
+      const mql = window.matchMedia('(min-width: 991px)');
+      mql.addListener(e => {
         if (e.matches) {
           recalculateAffixPosition();
         }
@@ -38,21 +39,18 @@ function pisces() {
     }
 
     function getFooterOffset() {
-      var footerInner = $('.footer-inner'),
-        footerMargin = footerInner.outerHeight(true) - footerInner.outerHeight(),
+      const footerInner = $('.footer-inner'),
+        footerMargin =
+          footerInner.outerHeight(true) - footerInner.outerHeight(),
         footerOffset = footerInner.outerHeight(true) + footerMargin;
       return footerOffset;
     }
 
-    function setSidebarMarginTop(headerOffset) {
-      return $('#sidebar').css({
-        'margin-top': headerOffset,
-      });
-    }
-
     function recalculateAffixPosition() {
       $(window).off('.affix');
-      sidebarInner.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
+      sidebarInner
+        .removeData('bs.affix')
+        .removeClass('affix affix-top affix-bottom');
       initAffix();
     }
   });

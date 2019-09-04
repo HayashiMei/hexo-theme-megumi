@@ -13,7 +13,7 @@ $(document).pjax('a:not(.fancybox)', '#main', {
   timeout: 5000,
 });
 
-$(document).on('pjax:start', function() {
+$(document).on('pjax:start', () => {
   NProgress.start();
   $('html, body').animate(
     {
@@ -23,7 +23,7 @@ $(document).on('pjax:start', function() {
   );
 });
 
-$(document).on('pjax:end', function() {
+$(document).on('pjax:end', () => {
   NProgress.done();
   require('./pisces')();
   CONFIG.fancybox && NexT.utils.wrapImageWithFancyBox();
@@ -32,7 +32,7 @@ $(document).on('pjax:end', function() {
   ga('send', 'pageview');
 });
 
-const addEventToMenu = e => {
+const addEventToMenu = () => {
   const menu = document.querySelector('#menu');
   menu.addEventListener('click', e => {
     const clickMenu = e.target.parentElement;

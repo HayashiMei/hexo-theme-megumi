@@ -6,11 +6,12 @@ const sakura = () => {
   const petals = [],
     num = 15;
 
-  let width = 800,
+  const width = 800,
     height = 600,
     petalWidth = 13,
-    petalHeight = 16,
-    dx = 5;
+    petalHeight = 16;
+
+  let dx = 5;
 
   const inTroSakura = new Image();
   inTroSakura.src = '/images/intro_sakura.png';
@@ -27,7 +28,7 @@ const sakura = () => {
     _ = 0.5;
   const init = () => {
     for (let i = 0; i < num; i++) {
-      let e = Math.random() * (u - w) + w;
+      const e = Math.random() * (u - w) + w;
       petals.push({
         posx: Math.random() * width,
         posy: Math.random() * height,
@@ -77,7 +78,7 @@ const sakura = () => {
     T = Math.random() * (b - L) + L;
     clearInterval(tid);
     tid = setInterval(() => {
-      if (T != dx) {
+      if (T !== dx) {
         T > dx ? (dx += 0.01) : (dx -= 0.01);
       }
     }, 100);
