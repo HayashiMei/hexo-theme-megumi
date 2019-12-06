@@ -2296,10 +2296,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha1-ShL/G2A3bvCYYsIJPt2Qgyi+hCM=
 
-gsap@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.0.1.tgz#946b49e860487bd23e6c884b95152d556a5f86f1"
-  integrity sha512-9nzEBF7Ss9Ogyw6oEOXZxxVYH8WNRA/nHmIp3DrPOTKmlLxX9MN2ovSoH9TApA+rucBgp9veCedujp5oSQRvZw==
+gsap@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.0.2.tgz#419682be9d4f1353080b920205e2d5f0587d95f6"
+  integrity sha512-BEDoe/MSOtsXFC83c2TcEmCS3XJ4tetIejh9zE3OGnRtf3uDgIRR+2u1Tu+nU36IZiaytqp97uyF2pWJkLoLZQ==
 
 has-ansi@^2.0.0:
   version "2.0.0"
