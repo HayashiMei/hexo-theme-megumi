@@ -732,6 +732,15 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@babel/types@^7.9.0":
+  version "7.9.0"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.9.0.tgz#00b064c3df83ad32b2dbf5ff07312b15c7f1efb5"
+  integrity sha512-BS9JKfXkzzJl8RluW4JGknzpiUV7ZrvTayM6yfqLTVBEnFtyowVIOu6rqxRd5cVO6yGoWf4T8u8dgK9oB+GCng==
+  dependencies:
+    "@babel/helper-validator-identifier" "^7.9.0"
+    lodash "^4.17.13"
+    to-fast-properties "^2.0.0"
+
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.npm.taobao.org/@webassemblyjs/ast/download/@webassemblyjs/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
@@ -899,9 +908,9 @@ acorn-jsx@^5.1.0:
   integrity sha1-KUrbcbVzmLBoABXwo4xWPuHbU4Q=
 
 acorn@^6.2.1:
-  version "6.4.0"
-  resolved "https://registry.npm.taobao.org/acorn/download/acorn-6.4.0.tgz#b659d2ffbafa24baf5db1cdbb2c94a983ecd2784"
-  integrity sha1-tlnS/7r6JLr12xzbsslKmD7NJ4Q=
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
+  integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
 
 acorn@^7.1.0:
   version "7.1.0"
@@ -2388,10 +2397,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6
   resolved "https://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
   integrity sha1-ShL/G2A3bvCYYsIJPt2Qgyi+hCM=
 
-gsap@3.2.4:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.2.4.tgz#60c1e3e91a0b3b0ce2161da73b105ae495b13425"
-  integrity sha512-ssWh9xKV4COyOVFl4OdJmO5CIsUPaL5Fetw08dyBeAU8ZKS7jzlMgwtUOseXL8lvXq6amNNzD7/MdOLgeFWEIQ==
+gsap@3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.2.5.tgz#4e4841e8c219b06d0d0d54c1c09c0681e2351c0a"
+  integrity sha512-3D5YZFnuoTj8hkMREadLq4+joYIGk+XE7DUVzWRu5ErtyfrDqRNDKFLMvJBsZP1u8VlMpcqFXmPBCZjKjOUbQw==
 
 has-ansi@^2.0.0:
   version "2.0.0"
