@@ -27,7 +27,7 @@
     "gsap": "3.2.6",
     "headroom.js": "0.11.0",
     "jquery-pjax": "2.0.1",
-    "js-yaml": "3.13.1",
+    "js-yaml": "3.14.0",
     "jshint-stylish": "2.2.1",
     "nprogress": "0.2.0",
     "prettier": "2.0.5",
