@@ -33,7 +33,7 @@
     "prettier": "2.4.0",
     "stylint": "2.0.0",
     "uglifyjs-webpack-plugin": "2.2.0",
-    "webpack": "5.52.1",
+    "webpack": "5.58.2",
     "webpack-cli": "4.8.0"
   }
 }
