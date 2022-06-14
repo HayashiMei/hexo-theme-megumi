@@ -30,7 +30,7 @@
     "js-yaml": "4.1.0",
     "jshint-stylish": "2.2.1",
     "nprogress": "0.2.0",
-    "prettier": "2.5.1",
+    "prettier": "2.7.0",
     "stylint": "2.0.0",
     "uglifyjs-webpack-plugin": "2.2.0",
     "webpack": "5.69.1",
